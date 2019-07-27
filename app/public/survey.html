@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Survey</title>
 </head>
 
@@ -14,136 +15,153 @@
     Each answer should be on a scale of 1 to 5 based on 
     how much the user agrees or disagrees with a question. 
     -->
-    <form action="#" method="POST">
+    <form id="form" action="#" method="POST">
         <p>1. What is your favourite season?</p>
-        <input id="winter" type="radio" name="first">
+        <input id="winter" type="radio" name="first" value="1">
         <label for="winter">Winter</label>
-        <br/>
-        <input id="spring" type="radio" name="first">
+        <br />
+        <input id="spring" type="radio" name="first" value="2">
         <label for="spring">Spring</label>
-        <br/>
-        <input id="summer" type="radio" name="first">
+        <br />
+        <input id="summer" type="radio" name="first" value="3">
         <label for="summer">Summer</label>
-        <br/>
-        <input id="autumn" type="radio" name="first">
+        <br />
+        <input id="autumn" type="radio" name="first" value="4">
         <label for="autumn">Autumn</label>
-        <br/>
+        <br />
+
+        <!-- <select id="question1">
+            <option value="1">Tea</option>
+            <option value="2">Soda</option>
+        </select> 
+    
+
+
+        $("question1").value // should be whatever option is selected?
+        -->
 
         <p>2. Do you prefer tea or coffee?</p>
-        <input id="tea" type="radio" name="second">
+        <input id="tea" type="radio" name="second" value="1">
         <label for="tea">Tea.</label>
-        <br/>
-        <input id="coffee" type="radio" name="second">
+        <br />
+        <input id="coffee" type="radio" name="second" value="2">
         <label for="coffee">Coffee.</label>
-        <br/>
-        <input id="both" type="radio" name="second">
+        <br />
+        <input id="both" type="radio" name="second" value="3">
         <label for="both">Both!</label>
-        <br/>
-        <input id="neither" type="radio" name="second">
+        <br />
+        <input id="neither" type="radio" name="second" value="4">
         <label for="neither">Neither.</label>
-        <br/>
+        <br />
 
         <p>3. Do you consider yourself an introvert or an extrovert?</p>
-        <input id="introvert" type="radio" name="third">
+        <input id="introvert" type="radio" name="third" value="1">
         <label for="introvert">Introvert.</label>
-        <br/>
-        <input id="extrovert" type="radio" name="third">
+        <br />
+        <input id="extrovert" type="radio" name="third" value="2">
         <label for="extrovert">Extrovert.</label>
-        <br/>
-        <input id="depends" type="radio" name="third">
+        <br />
+        <input id="depends" type="radio" name="third" value="3">
         <label for="depends">It depends on the situation.</label>
-        <br/>
-       
+        <br />
+
         <p>4. If you like piña coladas…</p>
-        <input id="song" type="radio" name="fourth">
+        <input id="song" type="radio" name="fourth" value="1">
         <label for="song">AND GETTING CAUGHT IN THE RAIN!!!</label>
-        <br/>
-        <input id="what" type="radio" name="fourth">
+        <br />
+        <input id="what" type="radio" name="fourth" value="2">
         <label for="what">What?</label>
-        <br/>
-        <input id="no" type="radio" name="fourth">
+        <br />
+        <input id="no" type="radio" name="fourth" value="3">
         <label for="no">No.</label>
-        <br/>
-        
+        <br />
+
         <p>5. Are you a morning person?</p>
-        <input id="yes" type="radio" name="fifth">
+        <input id="yes" type="radio" name="fifth" value="1">
         <label for="yes">Yes!</label>
-        <br/>
-        <input id="nope" type="radio" name="fifth">
+        <br />
+        <input id="nope" type="radio" name="fifth" value="2">
         <label for="nope">Nope.</label>
-        <br/>
-        <input id="absolutely" type="radio" name="fifth">
+        <br />
+        <input id="absolutely" type="radio" name="fifth" value="3">
         <label for="absolutely">Absolutely not.</label>
-        <br/>
-        <input id="weak" type="radio" name="fifth">
+        <br />
+        <input id="weak" type="radio" name="fifth" value="4">
         <label for="weak">Sleep is for the weak.</label>
-        <br/>
+        <br />
 
         <p>6. Cats or dogs?</p>
-        <input id="cats" type="radio" name="sixth">
+        <input id="cats" type="radio" name="sixth" value="1">
         <label for="cats">Meow</label>
-        <br/>
-        <input id="dogs" type="radio" name="sixth">
+        <br />
+        <input id="dogs" type="radio" name="sixth" value="2">
         <label for="dogs">Woof</label>
-        <br/>
-        <input id="whales" type="radio" name="sixth">
+        <br />
+        <input id="whales" type="radio" name="sixth" value="3">
         <label for="whales">*whale noises*</label>
-        <br/>
+        <br />
 
         <p>7. Who is your favourite member of Sonic Youth?</p>
-        <input id="kim" type="radio" name="seventh">
+        <input id="kim" type="radio" name="seventh" value="1">
         <label for="kim">Kim Gordon.</label>
-        <br/>
-        <input id="thurston" type="radio" name="seventh">
+        <br />
+        <input id="thurston" type="radio" name="seventh" value="2">
         <label for="thurston">Thurston Moore.</label>
-        <br/>
-        <input id="lee" type="radio" name="seventh">
+        <br />
+        <input id="lee" type="radio" name="seventh" value="3">
         <label for="lee">Lee Ranaldo.</label>
-        <br/>
-        <input id="steve" type="radio" name="seventh">
+        <br />
+        <input id="steve" type="radio" name="seventh" value="4">
         <label for="steve">Steve Shelley.</label>
-        <br/>
-        <input id="sorry" type="radio" name="seventh">
+        <br />
+        <input id="sorry" type="radio" name="seventh" value="5">
         <label for="sorry">Sorry, I don’t listen to good music.</label>
-        <br/>
+        <br />
 
         <p>8. How old are you?</p>
-        <input id="young" type="radio" name="eigth">
+        <input id="young" type="radio" name="eigth" value="1">
         <label for="young">18-24</label>
-        <br/>
-        <input id="adult" type="radio" name="eigth">
+        <br />
+        <input id="adult" type="radio" name="eigth" value="2">
         <label for="adult">25-30</label>
-        <br/>
-        <input id="mature" type="radio" name="eigth">
+        <br />
+        <input id="mature" type="radio" name="eigth" value="3">
         <label for="mature">31-39</label>
-        <br/>
-        <input id="old" type="radio" name="eigth">
+        <br />
+        <input id="old" type="radio" name="eigth" value="4">
         <label for="old">Time is an illusion. (jk, I am an old boi)</label>
 
         <p>9. Do you watch anime?</p>
-        <input id="yeah" type="radio" name="ninth">
+        <input id="yeah" type="radio" name="ninth" value="1">
         <label for="yeah">Yes.</label>
-        <br/>
-        <input id="degenerate" type="radio" name="ninth">
+        <br />
+        <input id="degenerate" type="radio" name="ninth" value="2">
         <label for="degenerate">No, I'm not a degenerate.</label>
-        <br/>
-        <input id="japanese" type="radio" name="ninth">
+        <br />
+        <input id="japanese" type="radio" name="ninth" value="3">
         <label for="japanese">お前はもう死んでいる。</label>
-        <br/>
+        <br />
 
         <p>10. Do you enjoy reading?</p>
-        <input id="knowledge" type="radio" name="tenth">
+        <input id="knowledge" type="radio" name="tenth" value="1">
         <label for="knowledge">Yes! Knowledge is power.</label>
-        <br/>
-        <input id="really" type="radio" name="tenth">
+        <br />
+        <input id="really" type="radio" name="tenth" value="2">
         <label for="really">Not really.</label>
-        <br/>
-        <input id="illiterate" type="radio" name="tenth">
+        <br />
+        <input id="illiterate" type="radio" name="tenth" value="3">
         <label for="illiterate">I am illiterate.</label>
-        <br/>
-        <br/>
-        <button type="submit">Submit</button>
+        <br />
+        <br />
+        <button type="submit" id="submit">Submit</button>
     </form>
+
+    <script type="text/javascript">
+        $("#form").submit(function (event) {
+            alert("Form data captured.");
+            event.preventDefault();
+        });
+    </script>
 </body>
 
 </html>
