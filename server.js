@@ -26,8 +26,8 @@ app.use(express.json());
 //   });
 
 // Browser thing running on localhost
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+apiRoutes(app);
+htmlRoutes(app);
 
   // Displays all characters
 //   app.get("/api/friends", function(req, res) {
